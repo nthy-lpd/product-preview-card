@@ -1,0 +1,142 @@
+/* ### Primary
+
+- Dark cyan: hsl(158, 36%, 37%)
+- Cream: hsl(30, 38%, 92%)
+
+### Neutral
+
+- Very dark blue: hsl(212, 21%, 14%)
+- Dark grayish blue: hsl(228, 12%, 48%)
+- White: hsl(0, 0%, 100%) */
+
+/* font-family: 'Fraunces', serif; */
+/* font-family: 'Montserrat', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,800;0,900;1,800&family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Kanit:ital,wght@0,400;0,800;0,900;1,800&display=swap');
+
+:root{
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --vdark-blue: hsl(212, 21%, 14%);
+    --dark-hreyish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cream);
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    margin: 15rem auto;
+    width: 35rem;
+}
+
+.content{
+    background-color: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.img__component img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contents{
+    padding: 2rem;
+}
+
+.perfume, .product__title, .product__subtitle, .prices{
+    padding-bottom: 1.5rem;
+}
+
+.perfume{
+    color: var(--dark-hreyish-blue);
+    letter-spacing: 5px;
+}
+
+.product__title{
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    line-height: 2rem;
+}
+
+
+.product__subtitle{
+    color: var(--dark-hreyish-blue);
+    line-height: 1.5rem;
+}
+
+.prices{
+    display: flex;
+    font-family: 'Fraunces', serif;
+}
+
+.current-price{
+    color: var(--dark-cyan);
+    font-size: 30px;
+}
+
+.previous-price{
+    color: var(--dark-hreyish-blue);
+    padding: 10px;
+}
+
+.cart{
+    border: none;
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    width: 100%;
+    height: 50px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.cart:hover{
+    background-color: var(--vdark-blue);
+    transition: 0.5s ease;
+}
+
+.acart{
+    padding-right: 0.5rem;
+}
+
+
+.attribution {
+    padding: 2rem;
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+@media screen and (max-width: 400px) {
+    .container{
+        margin: 0 auto;
+    }
+
+    .content{
+        grid-template-columns: 1fr;
+    }
+
+    .img__component img{
+        content: url(.//images/image-product-mobile.jpg);
+    }
+}
