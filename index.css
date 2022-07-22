@@ -130,6 +130,7 @@ body{
 @media screen and (max-width: 400px) {
     .container{
         margin: 0 auto;
+        padding: 1rem;
     }
 
     .content{
