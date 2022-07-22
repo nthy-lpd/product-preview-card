@@ -137,6 +137,6 @@ body{
     }
 
     .img__component img{
-        content: url(.//images/image-product-mobile.jpg);
+        content: url(image-product-mobile.jpg);
     }
 }
